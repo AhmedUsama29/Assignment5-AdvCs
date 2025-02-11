@@ -28,7 +28,12 @@
             Console.WriteLine("Func Delegate");
 
             Func<Book, string> AuthorsDelegate = BookFunction.GetAuthors;
-            LibraryEngine.ProcessBooks(books, new BookDetails(AuthorsDelegate)); //Convert Func to delegate 
+
+            //i need to change the method to accept (Func<Book, string> fPtr) instead of (BookDetails fPtr)
+            //so i used this way to pass the method : new BookDetails(AuthorsDelegate)
+
+            LibraryEngine.ProcessBooks(books, new BookDetails(AuthorsDelegate));
+
             #endregion
 
             #region Anonymous Method
