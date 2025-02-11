@@ -15,6 +15,7 @@ namespace Assignment5_Adv_C_
         public DateTime PublicationDate { get; set; }
         public decimal Price { get; set; }
 
+        #region Constructor
         public Book(string iSBN, string title, string[] authors, DateTime publicationDate, decimal price)
         {
             ISBN = iSBN;
@@ -22,7 +23,8 @@ namespace Assignment5_Adv_C_
             Authors = authors;
             PublicationDate = publicationDate;
             Price = price;
-        }
+        } 
+        #endregion
         public override string ToString()
         {
 
